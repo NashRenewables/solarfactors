@@ -6,3 +6,6 @@ logging.basicConfig()
 
 class PVFactorsError(Exception):
     pass
+
+from . import _version
+__version__ = _version.get_versions()['version']
