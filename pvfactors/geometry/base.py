@@ -6,7 +6,6 @@ from pvfactors import PVFactorsError
 from pvfactors.config import (
     DEFAULT_NORMAL_VEC, COLOR_DIC, PLOT_FONTSIZE,
     ALPHA_TEXT, MAX_X_GROUND)
-from pvfactors.geometry.plot import plot_coords, plot_bounds, plot_line
 from pvfactors.geometry.utils import \
     is_collinear, check_collinear, are_2d_vecs_collinear
 from pvlib.tools import cosd, sind
@@ -225,6 +224,7 @@ class BaseSurface:
         with_index : bool
             Flag to annotate surfaces with their indices (Default = False)
         """
+        from pvfactors.geometry.plot import plot_coords, plot_bounds, plot_line
         plot_coords(ax, self)
         plot_bounds(ax, self)
         plot_line(ax, self, color)
